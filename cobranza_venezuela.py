@@ -1118,9 +1118,12 @@ def ejecutar_scraper():
     print("    -> Solo añade SMS enviado a Colección; no manda mensajes.")
     print("=" * 76)
     
-    opcion = input("Selecciona una opción (1-10) [Por defecto: 2]: ").strip()
-    if opcion not in ("1", "2", "3", "4", "5", "6", "7", "8", "9", "10"):
-        opcion = "2"
+    opciones_validas = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}
+    while True:
+        opcion = input("Selecciona una opción (1-10): ").strip()
+        if opcion in opciones_validas:
+            break
+        print("⚠️ Debes escribir una opción válida entre 1 y 10. No se ejecutó ningún envío.")
 
     solo_correo = (opcion == "4")
     modo_solo_sms = (opcion == "5")
