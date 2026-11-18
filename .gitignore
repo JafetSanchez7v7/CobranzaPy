@@ -1,0 +1,5 @@
+# Esta carpeta solo versiona el script y el ejemplo de configuración.
+*
+!.gitignore
+!.env.example
+!cobranza_venezuela.py
